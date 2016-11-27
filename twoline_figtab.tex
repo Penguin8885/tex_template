@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{cc}
+%
+  \makeatletter
+    \def\@captype{figure}
+  \makeatother
+%
+  \begin{minipage}{0.5\textwidth}
+    \begin{center}
+      \includegraphics[width=6cm]{ファイル名}
+    \end{center}
+    \caption{タイトル} \label{fig:ラベル}
+  \end{minipage}
+%
+%
+  \makeatletter
+    \def\@captype{table}
+  \makeatother
+%
+  \begin{minipage}{0.5\textwidth}
+      \caption{タイトル}
+      \begin{center}
+        \begin{tabular}{|c|c|}\hline
+          \multicolumn{1}{|c|}{名前} & \multicolumn{1}{c|}{個数} \\ \hline
+        \end{tabular}
+      \end{center}
+      \label{tab:ラベル}
+  \end{minipage}
+%
+\end{tabular}
+\end{center}
+\end{table}
