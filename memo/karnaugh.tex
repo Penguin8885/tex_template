@@ -1,0 +1,19 @@
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc}
+\usepackage{karnaugh}
+
+\begin{center}
+  \begin{figure}[htbp]
+    \centering
+      \begin{Karnaughvuit}{AB}{C}
+        \contingut{0,0,0,1,0,1,1,1}
+	%\implicant[size]{$1}{$2}
+	%\implicantcostats[size]{$1}{$2}
+	%\implicantdaltbaix[size]{$1}{$2}
+        \implicant[3pt]{6}{7}
+        \implicant{3}{7}
+        \implicant[2pt]{7}{5}
+      \end{Karnaughvuit}
+    \caption{タイトル} \label{fig:ラベル}
+  \end{figure}
+\end{center}
