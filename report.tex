@@ -2,10 +2,14 @@
 %\documentclass[titlepage, a4j, 10pt]{jarticle}
 \usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
 \usepackage[dvipdfmx]{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,bm,amsfonts} %\bm{As} \mathbb{R}
+\usepackage{color} %\textcolor{red}{text...}
 \usepackage{fancyvrb}
 \fvset{ fontsize=\small, frame=single, numbers=left, tabsize=4, baselinestretch=0.8 }
 %% \VerbatimInput[label={name}]{source.c}
+
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+\newcommand{\argmin}{\mathop{\rm arg~min}\limits}
 
 \title{タイトル}
 \author{著者}
