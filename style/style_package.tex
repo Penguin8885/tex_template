@@ -1,0 +1,50 @@
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}%% \mathbb{R}
+\usepackage{bm}%% \bm{A}
+\usepackage[dvipdfmx]{color}%% \textcolor{red}{text}
+\usepackage{style/slashbox}%% \backslashbox{A}{B},\slashbox{A}{B}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% argmin argmax
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+\newcommand{\argmin}{\mathop{\rm arg~min}\limits}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% (fig3: figname) -> (fig3 figname)
+\makeatletter
+  \long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \iftdir\sbox\@tempboxa{#1\hskip2zw #2}%
+  \else\sbox\@tempboxa{#1\ \ #2}%
+  \fi
+  \ifdim \wd\@tempboxa >\hsize
+    \iftdir #1\hskip1zw#2\relax\par
+    \else #1 #2\relax\par\fi
+  \else
+    \global \@minipagefalse
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% section space
+\makeatletter
+  \renewcommand{\subsubsection}{\@startsection{subsubsection}{1}{\z@}{1.5\Cvs \@plus.5\Cvs \@minus.2\Cvs}{1sp}{\reset@font\normalsize\bfseries}}
+  \makeatother
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% fig(table) space
+\setlength\floatsep{2truemm}         % fig-fig space
+\setlength\textfloatsep{2truemm}     % text-fig space
+\setlength\intextsep{0truemm}        % fig space in text
+\setlength\abovecaptionskip{0truemm} % fig-caption space
+\setlength\belowcaptionskip{1truemm} % caption-fig space
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
